@@ -20,7 +20,7 @@ const index = (
           );
         })}
       </div>
-      <h2>Video card with poster attribute</h2>
+      <h2>Video card without video poster attribute</h2>
       <div className={classes.grid}>
         {props.videos.map((video: any, key: any) => {
           return (

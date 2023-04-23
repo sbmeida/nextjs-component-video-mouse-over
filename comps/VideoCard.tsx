@@ -8,9 +8,6 @@ type Props = {
 
 const VideoCard = ({ videoSrc, videoPoster }: Props) => {
   const [isMouseOver, setMouseOver] = useState(false);
-  const videoRef = useRef(null);
-  const imageRef = useRef(null);
-
   const playVideo = (event: any) => event.target.play();
   const stopVideo = (event: any) => {
     event.target.pause();
@@ -25,17 +22,11 @@ const VideoCard = ({ videoSrc, videoPoster }: Props) => {
     <div className={classes.container}>
       <div className={classes.thumbnail}>
         <a href="#" onMouseOver={showThumbnail} onMouseOut={hideThumbnail}>
-          <div className={classes.videoDuration}>1:20:30</div>
-          {/* {!isMouseOver && <img
-                    alt="Landscape picture"
-                    src="https://i.ytimg.com/vi/ba-HMvDn_vU/hq720.jpg?sqp=-oaymwE2CNAFEJQDSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhWIFUoZTAP&rs=AOn4CLAGBOrKpgqQ4HIUNaL6yGnJlE-2wA"
-                />} */}
           <video
             width="320"
             height="240"
             poster={videoPoster}
             onMouseOver={playVideo}
-            // onMouseOut={evt => evt.target.pause()}
             onMouseOut={stopVideo}
             muted
           >
@@ -43,7 +34,7 @@ const VideoCard = ({ videoSrc, videoPoster }: Props) => {
           </video>
         </a>
       </div>
-      <div className={classes.details}>other details/info/menu</div>
+      <div className={classes.details}>placeholder for other details/info/menu</div>
     </div>
   );
 };

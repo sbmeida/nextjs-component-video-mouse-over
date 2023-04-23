@@ -23,7 +23,6 @@ const VideoCard = ({ videoSrc, videoPoster }: Props) => {
     <div className={classes.container}>
       <div className={classes.thumbnail}>
         <a href="#" onMouseOver={showThumbnail} onMouseOut={hideThumbnail}>
-          <div className={classes.videoDuration}>1:20:30</div>
           {!isMouseOver && <img alt="Poster" src={videoPoster} />}
           <video
             width="320"
@@ -36,7 +35,7 @@ const VideoCard = ({ videoSrc, videoPoster }: Props) => {
           </video>
         </a>
       </div>
-      <div className={classes.details}>other details/info/menu</div>
+      <div className={classes.details}>placeholder for other details/info/menu</div>
     </div>
   );
 };
